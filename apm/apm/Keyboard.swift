@@ -23,13 +23,24 @@ class Keyboard {
     init(delegate: KeyboardDelegate) {
         self.delegate = delegate
     }
+    
+    var data: [NSDate] = []
+    var timer = Timer()
 
     func registerListener () {
         NSEvent.addGlobalMonitorForEvents(matching: NSEventMask.keyDown, handler: keyDown)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(Keyboard.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        let current = NSDate()
+        let count = data.filter({(timestamp) in
+            return Bool(current.timeIntervalSince(timestamp as Date) < 60)
+        }).count
+        self.delegate?.keyboardDataDidUpdate(data: KeyboardData(currentApm: count))
     }
     
     func keyDown (event: NSEvent!) {
-        print("key down is \(event.keyCode)");
-        self.delegate?.keyboardDataDidUpdate(data: KeyboardData(currentApm: 0))
+        data.append(NSDate())
     }
 }

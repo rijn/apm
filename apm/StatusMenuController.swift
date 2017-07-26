@@ -17,7 +17,7 @@ class StatusMenuController: NSObject, KeyboardDelegate {
 
     func generateString(str: String) -> NSAttributedString {
         let font = NSFont(name: "InputMono", size: 11.0)
-        return NSAttributedString(string: "APM", attributes: [NSFontAttributeName: font!])
+        return NSAttributedString(string: str, attributes: [NSFontAttributeName: font!])
     }
     
     func accessibilityTrusted() -> Bool {
@@ -36,6 +36,7 @@ class StatusMenuController: NSObject, KeyboardDelegate {
     }
     
     func keyboardDataDidUpdate(data: KeyboardData) {
+        statusItem.attributedTitle = generateString(str: "APM:\(data.currentApm)")
     }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
