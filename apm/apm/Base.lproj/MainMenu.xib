@@ -20,11 +20,15 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="cA3-cv-UtP" customClass="StatusMenuController" customModule="apm" customModuleProvider="target">
             <connections>
+                <outlet property="menuItemTrusted" destination="kvm-mX-Idc" id="L7k-Qt-SzZ"/>
                 <outlet property="statusMenu" destination="jDy-62-DKt" id="wFu-b3-ZPt"/>
             </connections>
         </customObject>
         <menu id="jDy-62-DKt">
             <items>
+                <menuItem title="Trusted" id="kvm-mX-Idc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Quit" id="7fL-5L-1f2">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
