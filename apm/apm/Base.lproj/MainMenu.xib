@@ -14,16 +14,21 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="apm" customModuleProvider="target">
             <connections>
-                <outlet property="statusMenu" destination="jDy-62-DKt" id="McI-jZ-PKh"/>
+                <outlet property="StatusMenuController" destination="cA3-cv-UtP" id="uaT-9h-5en"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="cA3-cv-UtP" customClass="StatusMenuController" customModule="apm" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="jDy-62-DKt" id="wFu-b3-ZPt"/>
+            </connections>
+        </customObject>
         <menu id="jDy-62-DKt">
             <items>
                 <menuItem title="Quit" id="7fL-5L-1f2">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="quitClicked:" target="Voe-Tx-rLC" id="4mS-Nh-EeY"/>
+                        <action selector="quitClicked:" target="cA3-cv-UtP" id="5Tn-Cz-ydf"/>
                     </connections>
                 </menuItem>
             </items>

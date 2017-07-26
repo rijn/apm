@@ -12,6 +12,7 @@
 		B2F5C3741F291A7A00A45BB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F5C3721F291A7A00A45BB5 /* MainMenu.xib */; };
 		B2F5C37F1F291A7A00A45BB5 /* apmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C37E1F291A7A00A45BB5 /* apmTests.swift */; };
 		B2F5C38A1F291A7A00A45BB5 /* apmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3891F291A7A00A45BB5 /* apmUITests.swift */; };
+		B2F5C3981F291EED00A45BB5 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		B2F5C3851F291A7A00A45BB5 /* apmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F5C3891F291A7A00A45BB5 /* apmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apmUITests.swift; sourceTree = "<group>"; };
 		B2F5C38B1F291A7A00A45BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMenuController.swift; path = ../StatusMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		B2F5C36D1F291A7A00A45BB5 /* apm */ = {
 			isa = PBXGroup;
 			children = (
+				B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */,
 				B2F5C36E1F291A7A00A45BB5 /* AppDelegate.swift */,
 				B2F5C3701F291A7A00A45BB5 /* Assets.xcassets */,
 				B2F5C3721F291A7A00A45BB5 /* MainMenu.xib */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F5C3981F291EED00A45BB5 /* StatusMenuController.swift in Sources */,
 				B2F5C36F1F291A7A00A45BB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

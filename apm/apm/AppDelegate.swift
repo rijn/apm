@@ -10,28 +10,12 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var StatusMenuController: StatusMenuController!
     
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    
-    func generateString(str: String) -> NSAttributedString {
-        let font = NSFont(name: "InputMono", size: 11.0)
-        return NSAttributedString(string: "APM", attributes: [NSFontAttributeName: font!])
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
+        // Insert code here to initialize your application
     }
-    
-    @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+    func applicationWillTerminate(aNotification: NSNotification) {
+        // Insert code here to tear down your application
     }
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.attributedTitle = generateString(str: "APM")
-        statusItem.menu = statusMenu
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {}
-
-
 }
-
