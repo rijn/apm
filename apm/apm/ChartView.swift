@@ -16,14 +16,18 @@ class ChartView: NSView {
         
         NSColor.white.setStroke()
         
-        var x = 10
-        for count in data.suffix(140) {
+        var x = 0
+        while (data.count < 75) {
+            data.insert(0, at: 0)
+        }
+        
+        for count in data.suffix(75) {
             let bar = NSBezierPath()
-            bar.move(to: NSMakePoint(CGFloat(x), 5.0))
-            bar.line(to: NSMakePoint(CGFloat(x), 5.0 + CGFloat(count) / 5))
-            bar.lineWidth = 1.0
+            bar.move(to: NSMakePoint(CGFloat(x), 0.0))
+            bar.line(to: NSMakePoint(CGFloat(x), 0.0 + CGFloat(count) / 5))
+            bar.lineWidth = 2.0
             bar.stroke()
-            x = x + 1
+            x = x + 2
         }
     }
     

@@ -34,14 +34,18 @@ class Keyboard {
     
     @objc func updateTimer() {
         let current = NSDate()
-        let count = data.filter({(timestamp) in
-            return Bool(current.timeIntervalSince(timestamp as Date) < 60)
-        }).count
+        let filtered = Array(data.filter({(timestamp) in
+            return Bool(current.timeIntervalSince(timestamp as Date) < 3)
+        }))
+        var count:Int = 0
+        if (filtered.count > 1) {
+            count = Int(Double(filtered.count) * Double(12.0) / Double((filtered.last?.timeIntervalSince(filtered.first as! Date))!))
+        }
         self.delegate?.keyboardDataDidUpdate(data: KeyboardData(currentApm: count))
     }
     
     func keyDown (event: NSEvent!) {
         data.append(NSDate())
-        data = Array(data.suffix(200))
+        data = Array(data.suffix(900))
     }
 }
