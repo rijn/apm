@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -15,11 +16,15 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="apm" customModuleProvider="target">
             <connections>
                 <outlet property="StatusMenuController" destination="cA3-cv-UtP" id="uaT-9h-5en"/>
+                <outlet property="settingWindow" destination="SOT-YK-xTd" id="Rvo-5n-Qny"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="cA3-cv-UtP" customClass="StatusMenuController" customModule="apm" customModuleProvider="target">
             <connections>
+                <outlet property="chartView" destination="21A-BA-c6a" id="1Go-qG-bKB"/>
+                <outlet property="menuItemChart" destination="WkY-oB-EMe" id="30h-P3-gMV"/>
+                <outlet property="menuItemSetting" destination="Dky-t6-ZoM" id="YIm-XH-jDK"/>
                 <outlet property="menuItemTrusted" destination="kvm-mX-Idc" id="L7k-Qt-SzZ"/>
                 <outlet property="statusMenu" destination="jDy-62-DKt" id="wFu-b3-ZPt"/>
             </connections>
@@ -29,6 +34,17 @@
                 <menuItem title="Trusted" id="kvm-mX-Idc">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="etD-QB-v14"/>
+                <menuItem title="Chart" id="WkY-oB-EMe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="FMW-Lj-GKh"/>
+                <menuItem title="Setting" id="Dky-t6-ZoM">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="settingClicked:" target="cA3-cv-UtP" id="9m8-5m-RUf"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="7fL-5L-1f2">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -37,5 +53,56 @@
                 </menuItem>
             </items>
         </menu>
+        <customView id="21A-BA-c6a" customClass="ChartView" customModule="apm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+        </customView>
+        <menuItem title="Item" id="5qU-bC-Mk9">
+            <modifierMask key="keyEquivalentModifierMask"/>
+        </menuItem>
+        <window title="Setting" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="SOT-YK-xTd" customClass="SettingWindow" customModule="apm" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="159" width="247" height="200"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="UIE-MO-bTe">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zk1-a2-qoO">
+                        <rect key="frame" x="63" y="137" width="121" height="26"/>
+                        <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Avc-vV-ZyQ">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleLaunchAtLogin:" target="SOT-YK-xTd" id="oqo-oy-0aY"/>
+                        </connections>
+                    </button>
+                    <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6H2-TS-Qf2">
+                        <rect key="frame" x="22" y="100" width="204" height="4"/>
+                    </box>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUO-nl-LWs">
+                        <rect key="frame" x="-2" y="34" width="251" height="34"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="© rijn, 2017. All rights reserved." id="oBG-T3-0M2">
+                            <font key="font" metaFont="system" size="11"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hUO-nl-LWs" firstAttribute="leading" secondItem="UIE-MO-bTe" secondAttribute="leading" id="ARZ-HD-JHC"/>
+                    <constraint firstItem="6H2-TS-Qf2" firstAttribute="leading" secondItem="UIE-MO-bTe" secondAttribute="leading" id="BVt-PX-I5g"/>
+                    <constraint firstItem="zk1-a2-qoO" firstAttribute="centerX" secondItem="UIE-MO-bTe" secondAttribute="centerX" id="NNt-c5-e3D"/>
+                    <constraint firstAttribute="trailing" secondItem="hUO-nl-LWs" secondAttribute="trailing" id="l7q-OY-rgi"/>
+                    <constraint firstAttribute="trailing" secondItem="6H2-TS-Qf2" secondAttribute="trailing" id="w1P-cF-btI"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="toggleOpenLogin" destination="zk1-a2-qoO" id="PkO-af-B2Q"/>
+            </connections>
+            <point key="canvasLocation" x="14.5" y="127"/>
+        </window>
     </objects>
 </document>

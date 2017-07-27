@@ -6,8 +6,8 @@
 //  Copyright © 2017 Rijn. All rights reserved.
 //
 
-import Foundation
 import Cocoa
+import Foundation
 
 struct KeyboardData {
     var currentApm: Int
@@ -29,7 +29,7 @@ class Keyboard {
 
     func registerListener () {
         NSEvent.addGlobalMonitorForEvents(matching: NSEventMask.keyDown, handler: keyDown)
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(Keyboard.updateTimer)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: (#selector(Keyboard.updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
@@ -42,5 +42,6 @@ class Keyboard {
     
     func keyDown (event: NSEvent!) {
         data.append(NSDate())
+        data = Array(data.suffix(200))
     }
 }

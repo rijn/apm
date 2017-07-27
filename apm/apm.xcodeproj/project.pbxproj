@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22008831F2951CB00A93CF7 /* SettingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22008821F2951CB00A93CF7 /* SettingWindow.swift */; };
 		B2F5C36F1F291A7A00A45BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C36E1F291A7A00A45BB5 /* AppDelegate.swift */; };
 		B2F5C3711F291A7A00A45BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F5C3701F291A7A00A45BB5 /* Assets.xcassets */; };
 		B2F5C3741F291A7A00A45BB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F5C3721F291A7A00A45BB5 /* MainMenu.xib */; };
@@ -14,6 +15,13 @@
 		B2F5C38A1F291A7A00A45BB5 /* apmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3891F291A7A00A45BB5 /* apmUITests.swift */; };
 		B2F5C3981F291EED00A45BB5 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */; };
 		B2F5C39A1F29208C00A45BB5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3991F29208C00A45BB5 /* Keyboard.swift */; };
+		B2F5C39C1F29310C00A45BB5 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C39B1F29310C00A45BB5 /* ChartView.swift */; };
+		B2F5C3A41F2941E800A45BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F5C3A31F2941E800A45BB5 /* AppDelegate.swift */; };
+		B2F5C3A61F2941E800A45BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F5C3A51F2941E800A45BB5 /* Assets.xcassets */; };
+		B2F5C3A91F2941E800A45BB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F5C3A71F2941E800A45BB5 /* MainMenu.xib */; };
+		B2F5C3CD1F2944A700A45BB5 /* apmLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2F5C3A11F2941E800A45BB5 /* apmLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B2F5C3D11F2944DE00A45BB5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F5C3D01F2944DE00A45BB5 /* Cocoa.framework */; };
+		B2F5C3D31F2944E700A45BB5 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F5C3D21F2944E700A45BB5 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +39,37 @@
 			remoteGlobalIDString = B2F5C36A1F291A7900A45BB5;
 			remoteInfo = apm;
 		};
+		B2F5C3B01F2941E800A45BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2F5C3631F291A7900A45BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2F5C3A01F2941E800A45BB5;
+			remoteInfo = apmLauncher;
+		};
+		B2F5C3BB1F2941E800A45BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2F5C3631F291A7900A45BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2F5C3A01F2941E800A45BB5;
+			remoteInfo = apmLauncher;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B2F5C3CC1F29449300A45BB5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				B2F5C3CD1F2944A700A45BB5 /* apmLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B22008821F2951CB00A93CF7 /* SettingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingWindow.swift; path = ../SettingWindow.swift; sourceTree = "<group>"; };
 		B2F5C36B1F291A7A00A45BB5 /* apm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F5C36E1F291A7A00A45BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2F5C3701F291A7A00A45BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +83,18 @@
 		B2F5C38B1F291A7A00A45BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMenuController.swift; path = ../StatusMenuController.swift; sourceTree = "<group>"; };
 		B2F5C3991F29208C00A45BB5 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		B2F5C39B1F29310C00A45BB5 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		B2F5C3A11F2941E800A45BB5 /* apmLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apmLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F5C3A31F2941E800A45BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2F5C3A51F2941E800A45BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2F5C3A81F2941E800A45BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B2F5C3AA1F2941E800A45BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F5C3AF1F2941E800A45BB5 /* apmLauncherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmLauncherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F5C3BA1F2941E800A45BB5 /* apmLauncherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmLauncherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F5C3CA1F29440000A45BB5 /* apmLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apmLauncher.entitlements; sourceTree = "<group>"; };
+		B2F5C3CB1F29441C00A45BB5 /* apm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apm.entitlements; sourceTree = "<group>"; };
+		B2F5C3D01F2944DE00A45BB5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B2F5C3D21F2944E700A45BB5 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F5C3D31F2944E700A45BB5 /* ServiceManagement.framework in Frameworks */,
+				B2F5C3D11F2944DE00A45BB5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +121,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2F5C39E1F2941E800A45BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3AC1F2941E800A45BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3B71F2941E800A45BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,7 +151,9 @@
 				B2F5C36D1F291A7A00A45BB5 /* apm */,
 				B2F5C37D1F291A7A00A45BB5 /* apmTests */,
 				B2F5C3881F291A7A00A45BB5 /* apmUITests */,
+				B2F5C3A21F2941E800A45BB5 /* apmLauncher */,
 				B2F5C36C1F291A7A00A45BB5 /* Products */,
+				B2F5C3CF1F2944DE00A45BB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +163,9 @@
 				B2F5C36B1F291A7A00A45BB5 /* apm.app */,
 				B2F5C37A1F291A7A00A45BB5 /* apmTests.xctest */,
 				B2F5C3851F291A7A00A45BB5 /* apmUITests.xctest */,
+				B2F5C3A11F2941E800A45BB5 /* apmLauncher.app */,
+				B2F5C3AF1F2941E800A45BB5 /* apmLauncherTests.xctest */,
+				B2F5C3BA1F2941E800A45BB5 /* apmLauncherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +173,14 @@
 		B2F5C36D1F291A7A00A45BB5 /* apm */ = {
 			isa = PBXGroup;
 			children = (
+				B2F5C3CB1F29441C00A45BB5 /* apm.entitlements */,
 				B2F5C3971F291EED00A45BB5 /* StatusMenuController.swift */,
 				B2F5C3991F29208C00A45BB5 /* Keyboard.swift */,
 				B2F5C36E1F291A7A00A45BB5 /* AppDelegate.swift */,
 				B2F5C3701F291A7A00A45BB5 /* Assets.xcassets */,
 				B2F5C3721F291A7A00A45BB5 /* MainMenu.xib */,
+				B22008821F2951CB00A93CF7 /* SettingWindow.swift */,
+				B2F5C39B1F29310C00A45BB5 /* ChartView.swift */,
 				B2F5C3751F291A7A00A45BB5 /* Info.plist */,
 			);
 			path = apm;
@@ -125,6 +204,27 @@
 			path = apmUITests;
 			sourceTree = "<group>";
 		};
+		B2F5C3A21F2941E800A45BB5 /* apmLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				B2F5C3CA1F29440000A45BB5 /* apmLauncher.entitlements */,
+				B2F5C3A31F2941E800A45BB5 /* AppDelegate.swift */,
+				B2F5C3A51F2941E800A45BB5 /* Assets.xcassets */,
+				B2F5C3A71F2941E800A45BB5 /* MainMenu.xib */,
+				B2F5C3AA1F2941E800A45BB5 /* Info.plist */,
+			);
+			path = apmLauncher;
+			sourceTree = "<group>";
+		};
+		B2F5C3CF1F2944DE00A45BB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F5C3D21F2944E700A45BB5 /* ServiceManagement.framework */,
+				B2F5C3D01F2944DE00A45BB5 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +235,7 @@
 				B2F5C3671F291A7900A45BB5 /* Sources */,
 				B2F5C3681F291A7900A45BB5 /* Frameworks */,
 				B2F5C3691F291A7900A45BB5 /* Resources */,
+				B2F5C3CC1F29449300A45BB5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -181,6 +282,59 @@
 			productReference = B2F5C3851F291A7A00A45BB5 /* apmUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B2F5C3A01F2941E800A45BB5 /* apmLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2F5C3C11F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncher" */;
+			buildPhases = (
+				B2F5C39D1F2941E800A45BB5 /* Sources */,
+				B2F5C39E1F2941E800A45BB5 /* Frameworks */,
+				B2F5C39F1F2941E800A45BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = apmLauncher;
+			productName = apmLauncher;
+			productReference = B2F5C3A11F2941E800A45BB5 /* apmLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2F5C3AE1F2941E800A45BB5 /* apmLauncherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2F5C3C41F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncherTests" */;
+			buildPhases = (
+				B2F5C3AB1F2941E800A45BB5 /* Sources */,
+				B2F5C3AC1F2941E800A45BB5 /* Frameworks */,
+				B2F5C3AD1F2941E800A45BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2F5C3B11F2941E800A45BB5 /* PBXTargetDependency */,
+			);
+			name = apmLauncherTests;
+			productName = apmLauncherTests;
+			productReference = B2F5C3AF1F2941E800A45BB5 /* apmLauncherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2F5C3B91F2941E800A45BB5 /* apmLauncherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2F5C3C71F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncherUITests" */;
+			buildPhases = (
+				B2F5C3B61F2941E800A45BB5 /* Sources */,
+				B2F5C3B71F2941E800A45BB5 /* Frameworks */,
+				B2F5C3B81F2941E800A45BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2F5C3BC1F2941E800A45BB5 /* PBXTargetDependency */,
+			);
+			name = apmLauncherUITests;
+			productName = apmLauncherUITests;
+			productReference = B2F5C3BA1F2941E800A45BB5 /* apmLauncherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,7 +347,13 @@
 				TargetAttributes = {
 					B2F5C36A1F291A7900A45BB5 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TF4L75X767;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					B2F5C3791F291A7A00A45BB5 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -204,6 +364,26 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B2F5C36A1F291A7900A45BB5;
+					};
+					B2F5C3A01F2941E800A45BB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TF4L75X767;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					B2F5C3AE1F2941E800A45BB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B2F5C3A01F2941E800A45BB5;
+					};
+					B2F5C3B91F2941E800A45BB5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B2F5C3A01F2941E800A45BB5;
 					};
 				};
 			};
@@ -223,6 +403,9 @@
 				B2F5C36A1F291A7900A45BB5 /* apm */,
 				B2F5C3791F291A7A00A45BB5 /* apmTests */,
 				B2F5C3841F291A7A00A45BB5 /* apmUITests */,
+				B2F5C3A01F2941E800A45BB5 /* apmLauncher */,
+				B2F5C3AE1F2941E800A45BB5 /* apmLauncherTests */,
+				B2F5C3B91F2941E800A45BB5 /* apmLauncherUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +434,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2F5C39F1F2941E800A45BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F5C3A61F2941E800A45BB5 /* Assets.xcassets in Resources */,
+				B2F5C3A91F2941E800A45BB5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3AD1F2941E800A45BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3B81F2941E800A45BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,9 +464,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22008831F2951CB00A93CF7 /* SettingWindow.swift in Sources */,
 				B2F5C3981F291EED00A45BB5 /* StatusMenuController.swift in Sources */,
 				B2F5C39A1F29208C00A45BB5 /* Keyboard.swift in Sources */,
 				B2F5C36F1F291A7A00A45BB5 /* AppDelegate.swift in Sources */,
+				B2F5C39C1F29310C00A45BB5 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +488,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2F5C39D1F2941E800A45BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F5C3A41F2941E800A45BB5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3AB1F2941E800A45BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F5C3B61F2941E800A45BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +523,16 @@
 			target = B2F5C36A1F291A7900A45BB5 /* apm */;
 			targetProxy = B2F5C3861F291A7A00A45BB5 /* PBXContainerItemProxy */;
 		};
+		B2F5C3B11F2941E800A45BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2F5C3A01F2941E800A45BB5 /* apmLauncher */;
+			targetProxy = B2F5C3B01F2941E800A45BB5 /* PBXContainerItemProxy */;
+		};
+		B2F5C3BC1F2941E800A45BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2F5C3A01F2941E800A45BB5 /* apmLauncher */;
+			targetProxy = B2F5C3BB1F2941E800A45BB5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -300,6 +540,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				B2F5C3731F291A7A00A45BB5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B2F5C3A71F2941E800A45BB5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2F5C3A81F2941E800A45BB5 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -401,10 +649,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apm/apm.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TF4L75X767;
 				INFOPLIST_FILE = apm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rijn.apm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,10 +665,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apm/apm.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TF4L75X767;
 				INFOPLIST_FILE = apm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rijn.apm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -481,6 +735,98 @@
 			};
 			name = Release;
 		};
+		B2F5C3C21F2941E800A45BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apmLauncher/apmLauncher.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TF4L75X767;
+				INFOPLIST_FILE = apmLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rijn.apmLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B2F5C3C31F2941E800A45BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apmLauncher/apmLauncher.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TF4L75X767;
+				INFOPLIST_FILE = apmLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rijn.apmLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B2F5C3C51F2941E800A45BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = apmLauncherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apmLauncherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apmLauncher.app/Contents/MacOS/apmLauncher";
+			};
+			name = Debug;
+		};
+		B2F5C3C61F2941E800A45BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = apmLauncherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apmLauncherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apmLauncher.app/Contents/MacOS/apmLauncher";
+			};
+			name = Release;
+		};
+		B2F5C3C81F2941E800A45BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = apmLauncherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apmLauncherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = apmLauncher;
+			};
+			name = Debug;
+		};
+		B2F5C3C91F2941E800A45BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = apmLauncherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Rijn.apmLauncherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = apmLauncher;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -500,6 +846,7 @@
 				B2F5C3901F291A7A00A45BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2F5C3911F291A7A00A45BB5 /* Build configuration list for PBXNativeTarget "apmTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +855,7 @@
 				B2F5C3931F291A7A00A45BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2F5C3941F291A7A00A45BB5 /* Build configuration list for PBXNativeTarget "apmUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +864,34 @@
 				B2F5C3961F291A7A00A45BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2F5C3C11F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2F5C3C21F2941E800A45BB5 /* Debug */,
+				B2F5C3C31F2941E800A45BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2F5C3C41F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2F5C3C51F2941E800A45BB5 /* Debug */,
+				B2F5C3C61F2941E800A45BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2F5C3C71F2941E800A45BB5 /* Build configuration list for PBXNativeTarget "apmLauncherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2F5C3C81F2941E800A45BB5 /* Debug */,
+				B2F5C3C91F2941E800A45BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
